@@ -1,0 +1,213 @@
+html{
+  box-sizing: border-box;
+}
+
+*,*::before,*::after{
+  box-sizing:inherit;
+}
+
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+    --main-orange:#cc5500;
+}
+
+body{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Poppins;
+}
+
+*{
+  font-family:Poppins;
+  margin:0;
+  padding:0;
+  color:white;
+}
+
+#navbar{
+  background-color:black;
+  margin:0;
+  border:0;
+  position:fixed;
+  width:100%;
+}
+#navbar .nav{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+#navbar .nav li{
+  display:inline-block;
+  margin:0;
+}
+
+#navbar .nav li a:hover{
+  color:red;
+  background-color:white;
+
+}
+
+#navbar .nav li a{
+  text-decoration:none;
+  color:white;
+  padding:1rem; /*1rem is 16px by default (ie default font size)*/ 
+}
+
+#navbar .nav h3{
+  margin:10px 10px;
+  color:white;
+}
+
+#navbar .nav span{
+  color:red;
+}
+
+#welcome-section{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:100vh;
+  background:linear-gradient(90deg,#444,#111);
+}
+
+h1, 
+h2{
+  font-family:Raleway;
+  padding:20px 20px 0px 20px;
+  margin-bottom:20px;
+}
+
+h1{
+  font-size:4.2rem;
+}
+
+h2{
+  font-size:2.5rem;
+}
+
+#welcome-section p{
+  color:#ff0033;
+  font-weight:normal;
+  font-family:Poppins;
+  font-size: 20;
+}
+
+#welcome-section p span{
+  color:#FF8C00;
+  font-weight:normal;
+}
+
+.projects-section{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(90deg,#6699CC,#4477aa);
+  text-align: center; /* IMPT TO KEEP THE IMAGES IN THE CENTER! previously, left img keep flushing to side */
+}
+
+
+
+.projects-section h2{
+  border-bottom: 3px solid #000000;
+}
+
+.projects-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  align-content:space-evenly;
+  justify-content:space-evenly;
+  width:100%;
+  max-width:1280px;   /*this is very impt to keep the columns to maximum of 3 */  
+  margin: 0 auto;
+}
+
+.projects-grid img{
+  height: 320px;
+  width: calc(100% - 1rem);
+  object-fit:cover;
+} 
+
+.projects-grid .project-title{
+  background-color:var(--main-gray);
+  display:block;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    padding: 2rem 0.5rem;
+}
+
+.project {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  margin:10px;
+  text-decoration:none;
+}
+
+.project .code{
+  color:var(--main-gray);
+  transition: color 0.3s ease-in;
+}
+
+.project:hover .code{
+  color:var(--main-orange);
+}
+
+.projects-section .show-all{
+  margin:30px 30px;
+  padding: 10px 10px;
+  background-color: var(--main-gray);
+}
+
+.projects-section .show-all:hover{
+  background-color:var(--main-orange);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-me{
+  width:100%;
+  background-color:var(--main-gray);
+  text-align: center; /* IMPT TO KEEP THE IMAGES IN THE CENTER! previously, left img keep flushing to side */
+}
+
+.contact-me{
+  padding:100px 0px;
+}
+
+.contact-me h1{
+  margin-bottom:10px;
+}
+
+.contact-methods{
+  margin:100px 250px;
+  display:flex;
+  justify-content:space-evenly;
+}
+
+.contact-methods a{
+  text-decoration:none;
+}
+
+.contact-methods a:hover{
+  transform:translateY(2px);
+  transition:transform 0.3s ease-in;
+  color:var(--main-orange);
+  transition:color 0.2s ease-in;
+}
+
+@media (max-width: 950px){
+    .contact-methods{
+    margin:100px 150px;
+  }
+}
